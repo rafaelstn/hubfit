@@ -11,6 +11,7 @@ import {
   Info,
   LayoutDashboard,
   Play,
+  Smartphone,
 } from "lucide-react";
 import { MarcaHubfit } from "@/componentes/marca";
 import { LogoPatrocinador } from "@/componentes/dominio/patrocinadores";
@@ -317,6 +318,12 @@ export default function PaginaApresentacao() {
               </Botao>
               <Botao variante="contorno" tamanho="lg" onClick={() => abrirDemo("admin")}>
                 Abrir painel administrativo
+              </Botao>
+              <Botao asChild variante="contorno" tamanho="lg">
+                <Link href="/celular">
+                  <Smartphone />
+                  Ver como app de celular
+                </Link>
               </Botao>
             </div>
           </Revela>
