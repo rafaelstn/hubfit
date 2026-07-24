@@ -86,7 +86,7 @@ export default function PaginaApresentacao() {
                   automático e abre espaço para marcas parceiras. Uma primeira versão profissional,
                   pronta para validar a operação real.
                 </p>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Botao tamanho="lg" onClick={() => abrirDemo("participante")}>
                     <Play />
                     Abrir demonstração
@@ -94,6 +94,12 @@ export default function PaginaApresentacao() {
                   <Botao variante="contorno" tamanho="lg" onClick={() => abrirDemo("admin")}>
                     <LayoutDashboard />
                     Ver painel admin
+                  </Botao>
+                  <Botao asChild variante="contorno" tamanho="lg">
+                    <Link href="/celular">
+                      <Smartphone />
+                      Ver como app de celular
+                    </Link>
                   </Botao>
                 </div>
                 <div className="mt-6 flex flex-wrap gap-2">
