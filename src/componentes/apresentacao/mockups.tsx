@@ -75,15 +75,12 @@ export function MolduraCelular({
       animate={flutuar && !reduzir ? { y: [0, -16, 0] } : undefined}
       transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: atraso }}
     >
-      <div className="absolute top-3 left-1/2 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-grafite-950" />
-      <div className="overflow-hidden rounded-[1.9rem]">
-        <Image
-          src={imagem}
-          alt={legenda}
-          width={390}
-          height={844}
-          className="h-auto w-full"
-        />
+      <div className="overflow-hidden rounded-[1.9rem] bg-grafite-950">
+        {/* Barra de status com a ilha central: a tela começa abaixo, sem cobrir conteúdo. */}
+        <div className="relative flex h-6 items-center justify-center bg-grafite-950">
+          <div className="h-3.5 w-16 rounded-full bg-black" />
+        </div>
+        <Image src={imagem} alt={legenda} width={390} height={844} className="h-auto w-full" />
       </div>
     </motion.div>
   );

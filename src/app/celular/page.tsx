@@ -195,15 +195,20 @@ export default function PaginaCelular() {
             <div className="relative">
               <div className="absolute inset-0 -z-10 translate-y-6 rounded-[3rem] bg-lima-400/8 blur-[80px]" />
               <div className="relative w-[300px] rounded-[3rem] border-[10px] border-grafite-700 bg-grafite-950 p-2 shadow-[0_50px_100px_-30px_rgba(0,0,0,0.9)] sm:w-[340px]">
-                <div className="absolute top-4 left-1/2 z-10 h-6 w-28 -translate-x-1/2 rounded-full bg-grafite-950" />
-                <div className="relative h-[620px] overflow-hidden rounded-[2.3rem] bg-grafite-900 sm:h-[680px]">
-                  <iframe
-                    key={`${href}-${recarga}`}
-                    ref={iframeRef}
-                    src={href}
-                    title="Pré-visualização do app HUBFIT no celular"
-                    className="h-full w-full border-0"
-                  />
+                <div className="overflow-hidden rounded-[2.3rem] bg-grafite-950">
+                  {/* Barra de status com a ilha: o app começa abaixo dela, sem sobreposição. */}
+                  <div className="flex h-7 items-center justify-center bg-grafite-950">
+                    <div className="h-4 w-20 rounded-full bg-black" />
+                  </div>
+                  <div className="relative h-[600px] overflow-hidden bg-grafite-900 sm:h-[660px]">
+                    <iframe
+                      key={`${href}-${recarga}`}
+                      ref={iframeRef}
+                      src={href}
+                      title="Pré-visualização do app HUBFIT no celular"
+                      className="h-full w-full border-0"
+                    />
+                  </div>
                 </div>
               </div>
               <p className="mt-4 text-center text-xs text-fumaca">

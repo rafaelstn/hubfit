@@ -17,6 +17,7 @@ import { CartaoDesafio } from "@/componentes/dominio/cartao-desafio";
 import { CartaoMetrica } from "@/componentes/dominio/cartao-metrica";
 import { LinhaRanking } from "@/componentes/dominio/lista-ranking";
 import { VitrineModalidades } from "@/componentes/dominio/modalidades";
+import { MuralComunidade } from "@/componentes/dominio/mural-comunidade";
 import { FaixaPatrocinadores } from "@/componentes/dominio/patrocinadores";
 import { Saudacao } from "@/componentes/dominio/saudacao";
 import { Secao } from "@/componentes/dominio/cabecalho-pagina";
@@ -267,6 +268,8 @@ export default function PaginaDashboard() {
           </CartaoConteudo>
         </Cartao>
       </div>
+
+      <MuralComunidade />
 
       <Secao
         titulo="Modalidades"

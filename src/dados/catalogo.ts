@@ -20,56 +20,56 @@ export const TIPOS_TREINO: DefinicaoTipoTreino[] = [
     tipo: "Musculação",
     volumePorMinuto: 13,
     cor: "#c6f24e",
-    foto: "/fotos/tipo-musculacao.jpg",
+    foto: "/fotos/tipo-musculacao-b.jpg",
     chamada: "Carga, série e progressão",
   },
   {
     tipo: "Crossfit",
     volumePorMinuto: 11,
     cor: "#b2e132",
-    foto: "/fotos/tipo-crossfit.jpg",
+    foto: "/fotos/tipo-crossfit-b.jpg",
     chamada: "Alta intensidade em circuito",
   },
   {
     tipo: "Funcional",
     volumePorMinuto: 8,
     cor: "#4a8cf7",
-    foto: "/fotos/tipo-funcional.jpg",
+    foto: "/fotos/tipo-funcional-b.jpg",
     chamada: "Força aplicada ao movimento",
   },
   {
     tipo: "Corrida",
     volumePorMinuto: 0,
     cor: "#f6c445",
-    foto: "/fotos/tipo-corrida.jpg",
+    foto: "/fotos/tipo-corrida-b.jpg",
     chamada: "Ritmo, fôlego e quilometragem",
   },
   {
     tipo: "Bike",
     volumePorMinuto: 0,
     cor: "#3ecf8e",
-    foto: "/fotos/tipo-bike.jpg",
+    foto: "/fotos/tipo-bike-b.jpg",
     chamada: "Pedal na rua ou no rolo",
   },
   {
     tipo: "Natação",
     volumePorMinuto: 0,
     cor: "#7fb0ff",
-    foto: "/fotos/tipo-natacao.jpg",
+    foto: "/fotos/tipo-natacao-b.jpg",
     chamada: "Baixo impacto, corpo inteiro",
   },
   {
     tipo: "Luta",
     volumePorMinuto: 6,
     cor: "#f2545b",
-    foto: "/fotos/tipo-luta.jpg",
+    foto: "/fotos/tipo-luta-b.jpg",
     chamada: "Condicionamento e técnica",
   },
   {
     tipo: "Mobilidade",
     volumePorMinuto: 0,
     cor: "#b3bcc9",
-    foto: "/fotos/tipo-mobilidade.jpg",
+    foto: "/fotos/tipo-mobilidade-b.jpg",
     chamada: "Recuperação e amplitude",
   },
 ];
@@ -84,7 +84,7 @@ export function corDoTipo(tipo: TipoTreino) {
 }
 
 export function fotoDoTipo(tipo: TipoTreino) {
-  return TIPOS_TREINO.find((item) => item.tipo === tipo)?.foto ?? "/fotos/tipo-musculacao.jpg";
+  return TIPOS_TREINO.find((item) => item.tipo === tipo)?.foto ?? "/fotos/tipo-musculacao-b.jpg";
 }
 
 export function patenteParaPontos(pontos: number) {

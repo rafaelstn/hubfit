@@ -30,7 +30,7 @@ export const PATROCINADORES_INICIAIS: Patrocinador[] = [
     ativo: true,
     cor: "#4a8cf7",
     monograma: "EL",
-    foto: "/fotos/tipo-corrida.jpg",
+    foto: "/fotos/tipo-corrida-b.jpg",
   },
   {
     id: "move-performance",
@@ -72,7 +72,7 @@ export const PATROCINADORES_INICIAIS: Patrocinador[] = [
     ativo: true,
     cor: "#3ecf8e",
     monograma: "CN",
-    foto: "/fotos/tipo-mobilidade.jpg",
+    foto: "/fotos/tipo-mobilidade-b.jpg",
   },
   {
     id: "peak-sports",
@@ -86,6 +86,6 @@ export const PATROCINADORES_INICIAIS: Patrocinador[] = [
     ativo: false,
     cor: "#f2545b",
     monograma: "PS",
-    foto: "/fotos/atleta-corrida.jpg",
+    foto: "/fotos/tipo-corrida-b.jpg",
   },
 ];
