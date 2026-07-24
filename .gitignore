@@ -1,0 +1,26 @@
+# dependências
+/node_modules
+/.pnp
+.pnp.*
+
+# build e cache do Next
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# artefatos de teste visual
+/.playwright-mcp/
+*.tsbuildinfo
+
+# ambiente
+.env*
+!.env.example
+
+# sistema operacional
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+npm-debug.log*

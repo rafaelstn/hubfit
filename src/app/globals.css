@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  /* Base grafite */
+  --color-grafite-950: #08090b;
+  --color-grafite-900: #0b0d10;
+  --color-grafite-850: #101317;
+  --color-grafite-800: #14181d;
+  --color-grafite-700: #1a1f26;
+  --color-grafite-600: #232932;
+  --color-grafite-500: #2e3641;
+
+  /* Verde-limao: acao, progresso, destaque */
+  --color-lima-50: #f4fde0;
+  --color-lima-200: #e0f9a2;
+  --color-lima-300: #d4f775;
+  --color-lima-400: #c6f24e;
+  --color-lima-500: #b2e132;
+  --color-lima-600: #8fc019;
+
+  /* Azul Damatech: estrutura e selecao */
+  --color-damatech-300: #7fb0ff;
+  --color-damatech-400: #4a8cf7;
+  --color-damatech-500: #1b63e8;
+  --color-damatech-600: #1450c4;
+  --color-damatech-700: #103f99;
+
+  /* Texto */
+  --color-neve: #f5f7fa;
+  --color-nevoa: #b3bcc9;
+  --color-fumaca: #7d8797;
+
+  /* Semanticas */
+  --color-sucesso: #3ecf8e;
+  --color-alerta: #f6c445;
+  --color-perigo: #f2545b;
+
+  --font-sans: var(--fonte-corpo), system-ui, sans-serif;
+  --font-display: var(--fonte-display), var(--fonte-corpo), system-ui, sans-serif;
+
+  --radius-card: 1rem;
+
+  --animate-surgir: surgir 0.35s ease-out both;
+  --animate-pulsar-suave: pulsar-suave 2.4s ease-in-out infinite;
+
+  @keyframes surgir {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulsar-suave {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.55;
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-grafite-600);
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  /* Compensa o cabeçalho fixo ao navegar por âncoras. */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-grafite-900);
+    color: var(--color-neve);
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-lima-400);
+    color: var(--color-grafite-950);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .superficie {
+    background-color: var(--color-grafite-850);
+    border: 1px solid var(--color-grafite-600);
+  }
+
+  .rolagem-fina {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-grafite-500) transparent;
+  }
+
+  .sem-barra::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sem-barra {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .grade-tenue {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}
+
+/* Recharts: neutraliza o foco pontilhado padrao */
+.recharts-wrapper svg:focus,
+.recharts-surface:focus {
+  outline: none;
+}
